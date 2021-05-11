@@ -14,8 +14,6 @@ namespace Core.Aspects.Autofac.Validation
         private Type _validatorType;
         public ValidationAspect(Type validatorType)
         {
-            // bu if defensive coding için yazılmıştır.
-            // AOP annotation'da class type girerken, IValidator tipte olması gerektiğini söylüyoruz.
             if (!typeof(IValidator).IsAssignableFrom(validatorType))
             {
                 //throw new System.Exception(AspectMessages.WrongValidationType);

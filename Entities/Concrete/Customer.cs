@@ -1,5 +1,4 @@
-﻿/* Kodların altında açıklamalar var. */
-using Core.Entities;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,10 +13,3 @@ namespace Entities.Concrete
         public string City { get; set; }
     }
 }
-
-/*
-        Northwind veritabanında bu proplar string olarak tanımlandığı için
-        biz de kod kısmında string olarak tanımlamak durumundayız.
-
-        yoksa id özelliğini string olarak tanımlamak hatalıdır.
- */

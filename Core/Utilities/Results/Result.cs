@@ -21,12 +21,3 @@ namespace Core.Utilities.Results
 
     }
 }
-
-// yalnızca get özelliğine sahip olan property'ler readonly'dir.
-// yani herhangi bir değer set edilemez demektir.
-
-// ancak readonly olan prop'lar sadece ve sadece constructor içinde set edilebilirler.
-// biz de bu yöntemi kullanarak set işlemi yaptık.
-
-// biz set de kleyebilirdik ancak programcıların kısıtlanması ve daha güzel bir yapı kurmak adına
-// bu şekilde kodladık. Bu şekilde sadece bizim belirlediğimiz şekilde Result kullanılabilecek.

@@ -10,8 +10,3 @@ namespace Core.Utilities.Results
 
     }
 }
-
-// Iresult'tan gelen success ve message yine var.
-// buna ek olarak Data da döndürüyoruz.
-
-// T için kısıtlama yazmıyoruz. Çünkü her şey olabilir.

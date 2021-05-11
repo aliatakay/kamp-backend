@@ -1,5 +1,4 @@
 ﻿using Business.Abstract;
-using Business.CCS;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
@@ -28,7 +27,6 @@ namespace Business.Concrete
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
-            // yukarıya aop gelince, aşağıdaki satır eskide kaldı.
             //ValidationTool.Validate(new ProductValidator(), product);
 
             if (CheckIfProductCountOfCategoryCorrect(product.CategoryId).Success)
@@ -42,12 +40,6 @@ namespace Business.Concrete
             }
 
             return new ErrorResult();
-
-            // normalde Add metodu DAL katmanında hata fırlatabilir.
-            // biz şu an olası hataları yakalamıyoruz.
-            // yalnızca proje patlamazsa ve bu satırdan devam ederse demek ki işlem başarılı olmuş varsayıyoruz.
-            // bu sebepten dolayı şimdilik true dedik.
-            // ileride error handling mantığı elbette eklenebilir.
         }
 
         public IDataResult<List<Product>> GetAll()
@@ -56,7 +48,7 @@ namespace Business.Concrete
             //{
             //    return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             //}
-            // gerekli business kodları
+
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(), Messages.ProductsListed);
         }
 

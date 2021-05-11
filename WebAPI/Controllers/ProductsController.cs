@@ -38,7 +38,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult Add(Product product) // frontend den gelecek olan veri
+        public IActionResult Add(Product product)
         {
             var result = _productService.Add(product);
             
